@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- JQUERY-->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="button-btn">
+      <button id="btn-add" type="button" class="btn btn-primary">
+        Add Item
+      </button>
+      <button id="btn-sdate" type="button" class="btn btn-secondary">
+        Sort Date
+      </button>
+      <button id="btn-sname" type="button" class="btn btn-success">
+        Sort Name
+      </button>
+      <button id="btn-checkq" type="button" class="btn btn-danger">
+        Check Quantum
+      </button>
+      <button id="btn-checkd" type="button" class="btn btn-warning">
+        Check Deadline
+      </button>
+    </div>
+
+    <!-- Table Add -->
+
+    <div class="input-box">
+      <label for="">ID</label>
+      <input type="text" name="" id="input-id" />
+      <label for="">Name</label>
+      <input type="text" name="" id="input-name" />
+      <label for="">Quantum</label>
+      <input type="number" name="" id="input-quan" />
+      <label for="">Date</label>
+      <input type="date" name="" id="input-date" />
+      <button class="btn-add" onclick="add()">Add</button>
+    </div>
+
+    <!-- Table -->
+
+    <table class="table" id="table-displaying">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Quantum</th>
+          <th scope="col">Date</th>
+        </tr>
+      </thead>
+    </table>
+
+    <!-- Modal -->
+    <div
+      class="modal"
+      id="modal-working"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modal-title"></h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+              id="btn-cancel"
+            >
+              Save
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="btn-confirm"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="./main.js"></script>
+</html>
